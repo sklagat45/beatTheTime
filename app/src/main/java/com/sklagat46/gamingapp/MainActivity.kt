@@ -21,15 +21,17 @@ import androidx.core.os.BuildCompat
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
     internal var score = 0;
-    var btnTapMe: Button? =findViewById<Button>(R.id.btnTapMe)
-    var gameScoreTv: TextView? = findViewById<TextView>(R.id.tvScore)
-    var tvTimeLeft = findViewById<TextView>(R.id.tvTimeLeft)
+
 
     internal  var gameStarted =false
     internal lateinit var countDownTimer: CountDownTimer
     internal val initialCountDownTimer:Long = 60000
     internal val countDownInterval: Long= 1000
     internal  var timeLeftOnTimer: Long =60000
+    internal lateinit var btnTapMe: Button
+    internal lateinit var gameScoreTv: TextView
+    internal lateinit var tvTimeLeft: TextView
+
     companion object{
         private val TAG  = MainActivity:: class.java.simpleName
         private  const val SCORE_KEY ="SCORE_KEY"
@@ -40,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "onCreate Called. the score is: $score")
+
+        btnTapMe =findViewById<Button>(R.id.btnTapMe)
+        gameScoreTv = findViewById<TextView>(R.id.tvScore)
+        tvTimeLeft = findViewById<TextView>(R.id.tvTimeLeft)
 
 
         btnTapMe!!.setOnClickListener {
