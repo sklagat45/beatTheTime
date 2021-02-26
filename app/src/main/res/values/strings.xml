@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GamingApp</string>
+    <string name="tap_me">TAP ME!</string>
+    <string name="time_left">time left</string>
+    <string name="your_score">Your score</string>
+    <string name="your_score_1d">Your Score %1d</string>
+    <string name="time_left_1d">Time Left %1d</string>
+    <string name="aboutTitle">Time Fighter Game 1.0</string>
+    <string name="aboutMessage">created by the Kiplagat</string>
+</resources>
